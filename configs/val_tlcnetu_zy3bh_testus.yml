@@ -1,0 +1,18 @@
+model:
+    arch: tlcnetu
+data:
+    dataset: diydata
+    train_split: train_aug
+    val_split: val
+    img_rows: 400
+    img_cols: 'same'
+    path: E:\yinxcao\us\sample
+    n_class: 1
+    n_maxdisp: 192
+training:
+    epochs: 300
+    batch_size: 16
+    learning_rate: 0.001
+    resume: 'runs\\tlcnetu_zy3bh\\V4\\finetune_300.tar'
+    device: 'cuda'
+savepath: D:\cn\pred_us

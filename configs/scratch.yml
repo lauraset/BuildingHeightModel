@@ -1,0 +1,29 @@
+model:
+    arch: unet
+data:
+    dataset: diydata
+    train_split: train_aug
+    val_split: val
+    img_rows: 'same'
+    img_cols: 'same'
+    path: E:\Yinxcao\ningbo\fcn\data
+    n_class: 7
+training:
+    epochs: 200
+    batch_size: 16
+    val_interval: 2
+    n_workers: 16
+    print_interval: 1
+    optimizer:
+        name: 'sgd'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+        momentum: 0.99
+    loss:
+        name: 'cross_entropy'
+        size_average: False
+    lr_schedule: 1
+    learning_rate: 0.0001
+    resume: 'runs\\scratch\\V1\\finetune_120.tar'
+    device: 'cuda'
+savepath: 'runs\\scratch\\V1\\pred'

@@ -1,0 +1,17 @@
+model:
+    arch: tlcnetu
+data:
+    dataset: diydata
+    train_split: train_aug
+    val_split: val
+    img_rows: 400
+    img_cols: 'same'
+    path: D:\yinxcao\height\sample_us
+    n_class: 1
+    n_maxdisp: 192
+training:
+    epochs: 150
+    batch_size: 16
+    learning_rate: 0.001
+    resume: 'runs\\tlcnetu_zy3bh\\V1\\finetune_298.tar'
+    device: 'cuda'

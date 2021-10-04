@@ -1,0 +1,34 @@
+model:
+    arch: tlcnet
+data:
+    dataset: diydata
+    train_split: train_aug
+    val_split: val
+    img_rows: 256
+    img_cols: 'same'
+    path: F:\yinxcao\sample
+    n_class: 1
+    n_maxdisp: 192
+training:
+    epochs: 200
+    batch_size: 8
+    val_interval: 2
+    n_workers: 16
+    print_interval: 1
+    optimizer:
+        name: 'sgd'
+        lr: 1.0e-4
+        weight_decay: 0.0005
+        momentum: 0.99
+    loss:
+        name: 'cross_entropy'
+        size_average: True
+    lr_schedule: 1
+    learning_rate: 0.001
+    resume: ''
+    device: 'cuda'
+    augmentation:
+        rflip: 0.5
+        vflip: 0.5
+        rotate: 30
+savepath: 'runs\\tlcnet_zy3bh'
