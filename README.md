@@ -1,10 +1,12 @@
 ## BuildingHeightModel
 ### 1. Data
-not availabel yet
+see the sample directory. Note that the whole dataset is not available publicly now.
 ### 2. Train the model
 python train_zy3bh_tlcnetU_loss.py
 ### 3. pretrained model
-see the weights/
+see runs/
+
+If there is any issue, please feel free to contact me (email: yinxcao@163.com or yinxcao@whu.edu.cn).
 ### acknowledgement
 @article{mshahsemseg,
     Author = {Meet P Shah},
