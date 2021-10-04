@@ -1,5 +1,4 @@
-## BuildingHeightModel
-# Paper: A deep learning method for building height estimation using high-resolution multi-view imagery over urban areas: A case study of 42 Chinese cities.
+### Paper: A deep learning method for building height estimation using high-resolution multi-view imagery over urban areas: A case study of 42 Chinese cities.
 Author: Yinxia Cao, Xin Huang. Details are shown in https://www.sciencedirect.com/science/article/pii/S0034425721003102
 ### 1. Data
 see the sample directory. Note that the whole dataset is not available publicly now.
