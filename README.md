@@ -1,7 +1,10 @@
 ## BuildingHeightModel
 ### 1. Data
+not availabel yet
 ### 2. Train the model
 python train_zy3bh_tlcnetU_loss.py
+### 3. pretrained model
+see the weights/
 ### acknowledgement
 @article{mshahsemseg,
     Author = {Meet P Shah},
