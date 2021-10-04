@@ -1,8 +1,8 @@
-# BuildingHeightModel
-
-# Train the model
-
-# acknowledgement
+## BuildingHeightModel
+### 1. Data
+### 2. Train the model
+python train_zy3bh_tlcnetU_loss.py
+### acknowledgement
 @article{mshahsemseg,
     Author = {Meet P Shah},
     Title = {Semantic Segmentation Architectures Implemented in PyTorch.},
