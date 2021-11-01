@@ -1,5 +1,5 @@
 '''
-test ningbo images
+predict on images
 '''
 import os
 import yaml
@@ -40,7 +40,7 @@ def main(cfg, writer, logger):
         model = torch.nn.DataParallel(model, device_ids=range(torch.cuda.device_count()))
 
     #resume = cfg["training"]["resume"]
-    resume = r'runs\tlcnetu_zy3bh\V1\finetune_200.tar'
+    resume = r'runs\tlcnetu_zy3bh\V1\finetune_298.tar'
     if os.path.isfile(resume):
         print("=> loading checkpoint '{}'".format(resume))
         checkpoint = torch.load(resume)
