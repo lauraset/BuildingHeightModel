@@ -47,6 +47,7 @@ If you find this repo useful for your research, please consider citing the paper
 }
 ```
 ## Acknowledgement
+Thanks for advice from Mengmeng Li doctor, the professor Xuecao Li, and anonymous reviewers.
 ```
 @article{mshahsemseg,
     Author = {Meet P Shah},
