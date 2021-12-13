@@ -31,7 +31,7 @@ see the pretrained model in directory runs/
 python evaluate.py
 ```
 
-If there is any issue, please feel free to contact me (email: yinxcao@163.com or yinxcao@whu.edu.cn).
+If there is any issue, please feel free to contact me. The email adress is yinxcao@163.com or yinxcao@whu.edu.cn, and researchgate link is  https://www.researchgate.net/profile/Yinxia-Cao.
 ## Citation
 
 If you find this repo useful for your research, please consider citing the paper
@@ -47,7 +47,7 @@ If you find this repo useful for your research, please consider citing the paper
 }
 ```
 ## Acknowledgement
-Thanks for advice from the supervisor Xin Huang, Mengmeng Li doctor, Professor Xuecao Li, and anonymous reviewers.
+Thanks for advice from the supervisor [Xin Huang](https://scholar.google.com/citations?user=TS6FzEwAAAAJ&hl=zh-CN), Doctor [Mengmeng Li](https://scholar.google.com/citations?user=TwTgEzwAAAAJ&hl=en), Professor [Xuecao Li](https://scholar.google.com.hk/citations?user=r2p47SEAAAAJ&hl=zh-CN), and anonymous reviewers.
 ```
 @article{mshahsemseg,
     Author = {Meet P Shah},
