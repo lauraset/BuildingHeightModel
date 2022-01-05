@@ -17,6 +17,13 @@ We introduce high-resolution ZY-3 multi-view images to estimate building height 
 
 See the sample directory. Due to the copyright problem, the whole dataset is not available publicly now.
 However, the reference height data from Amap can be accessible for research use. Here is the download [link](https://pan.baidu.com/s/1bBTvZcPM6PeOXxxW3j_jOg) and extraction code is 4gn2 ). The provided data is original one, and preprocessing is needed before use.
+```
+for the sample directory:
+  --img: the multi-spectral images with four bands (B, G, R, and NIR)
+  --lab: the building height (unit: meter)
+  --lab_floor: the number of floors of buildings 
+  --tlc: the multi-view images with three bands (nadir, forward, and backward viewing angles)
+```
 
 ### Train the height model
 #### 1. Prepare your dataset
