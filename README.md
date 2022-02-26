@@ -39,6 +39,17 @@ python evaluate.py
 ```
 
 If there is any issue, please feel free to contact me. The email adress is yinxcao@163.com or yinxcao@whu.edu.cn, and researchgate link is  https://www.researchgate.net/profile/Yinxia-Cao.
+
+## Interesting application in Bangalore, India
+update on 2022.2.26
+We directly applied the trained model in China to Bangalore, and obtained amazing results as follows.
+1. Results on the Bangalore
+![image](https://user-images.githubusercontent.com/39206462/155845595-80a7cecb-ae88-4ef6-bcd2-f9dabaea6771.png)
+2. Enlarged views
+![image](https://user-images.githubusercontent.com/39206462/155845516-f891da88-a178-4fd6-9edc-8eb5bcb26278.png)
+
+Note: the above results show that our method outperforms random forest method, and shows rich details of buildings.
+
 ## Citation
 
 If you find this repo useful for your research, please consider citing the paper
