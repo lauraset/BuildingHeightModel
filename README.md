@@ -24,7 +24,10 @@ for the sample directory:
   --lab_floor: the number of floors of buildings 
   --tlc: the multi-view images with three bands (nadir, forward, and backward viewing angles)
 ```
-Note that it is a good start to use the open ZY3 data from the ISPRS organization, see [link](https://www.isprs.org/data/zy-3-Berlin/Default.aspx).
+Note that it is a good start to use the open ZY3 data from the ISPRS organization, see [link](https://www.isprs.org/data/zy-3-Berlin/Default.aspx).   
+Take Hong Kong, China for example:   
+![image](https://user-images.githubusercontent.com/39206462/158020784-6eb7d27e-6d93-4c42-b211-17d543675ba7.png)   
+This image can be used to test the performance of the pretrained building height model.
 ### Train the height model
 #### 1. Prepare your dataset
 #### 2. edit data path
