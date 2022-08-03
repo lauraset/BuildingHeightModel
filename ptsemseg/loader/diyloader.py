@@ -73,9 +73,12 @@ class myImageFloderold(data.Dataset):
 # img, tlc, lab 2020.7.27
 # update: 2020.9.11: lab, the unit has been changed to meters (float) rather than floor number.
 class myImageFloder(data.Dataset):
-    def __init__(self, imgpath, labpath, augmentations=False):  # data loader #params nrange
+    def __init__(self, imgpath, labpath, augmentations=False, num= 0):  # data loader #params nrange
         self.imgpath = imgpath
         self.labpath = labpath
+        if num>0:
+            self.imgpath = imgpath[:num]
+            self.labpath = labpath[:num]
         self.augmentations = augmentations
 
     def __getitem__(self, index):
@@ -106,9 +109,12 @@ class myImageFloder(data.Dataset):
 
 # only load tlc (3bands)
 class myImageFloder_tlc(data.Dataset):
-    def __init__(self, imgpath, labpath, augmentations=False):  # data loader #params nrange
+    def __init__(self, imgpath, labpath, augmentations=False, num=0):  # data loader #params nrange
         self.imgpath = imgpath
         self.labpath = labpath
+        if num>0:
+            self.imgpath = imgpath[:num]
+            self.labpath = labpath[:num]
         self.augmentations = augmentations
 
     def __getitem__(self, index):
@@ -134,9 +140,12 @@ class myImageFloder_tlc(data.Dataset):
 
 # only load mux (4 bands) and lab
 class myImageFloder_mux(data.Dataset):
-    def __init__(self, imgpath, labpath, augmentations=False):  # data loader #params nrange
+    def __init__(self, imgpath, labpath, augmentations=False, num=0):  # data loader #params nrange
         self.imgpath = imgpath
         self.labpath = labpath
+        if num>0:
+            self.imgpath = imgpath[:num]
+            self.labpath = labpath[:num]
         self.augmentations = augmentations
 
     def __getitem__(self, index):
