@@ -28,6 +28,22 @@ Note that it is a good start to use the open ZY3 data from the ISPRS organizatio
 Take Hong Kong, China for example:   
 ![image](https://user-images.githubusercontent.com/39206462/158020784-6eb7d27e-6d93-4c42-b211-17d543675ba7.png)   
 This image can be used to test the performance of the pretrained building height model.
+### Predict the height model
+#### 1. download the pretrained weights in the `run` directory.
+#### 2. run the predict code and revise the path of data and weights.
+```
+data_path = r'sample' # the path of images 
+resume = r'runs\tlcnetu_zy3bh\V1\finetune_298.tar' # the path of pretrained weights
+```
+
+```
+python pred_zy3bh_tlcnetU.py         # the proposed model with two encoders for multi-spectral and multi-view images
+python pred_zy3bh_tlcnetU_mux.py     # the model with one encoder for multi-spectral images
+python pred_zy3bh_tlcnetU_tlc.py     # the model with one encoder for multi-view images
+python pred_zy3bh_tlcnetU_tlcmux.py  # the model with one encoder for the stacking image from multi-spectral and multi-view images along the channel dimension
+```
+#### 3. the predicted results can be seen in the `pred.rar` 
+
 ### Train the height model
 #### 1. Prepare your dataset
 #### 2. edit data path
