@@ -75,6 +75,7 @@ def main():
             for k in range(count):
                 tif.imsave((os.path.join(respath,'pred_'+names[k]+'.tif')), y_pred[k])
                 tif.imsave((os.path.join(respath,'seg_'+names[k]+'.tif')), y_seg[k])
+                tif.imsave((os.path.join(respath, 'seg_' + names[k] + '_clr.tif')), y_seg[k] * 255)
             counts += count
 
     res = acc.getacc()
