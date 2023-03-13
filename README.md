@@ -6,6 +6,18 @@ We introduce high-resolution ZY-3 multi-view images to estimate building height 
 
 ---------------------
 
+## To do
+introducing data preprocessing steps   
+details can be seen in https://www.cnblogs.com/enviidl/p/16541009.html   
+The main steps includes: 
+```
+1) orthorectification on all images to 2.5 m;
+2) image-to-image registration; 
+3) gram-schimit pansharping on multi-spectral and nadir images;   
+4) image cropping;
+5) quick atmospheric correction on the fused multi-spectral images from step 2).
+```
+Codes will be updated as soon as possible.
 
 ## Getting Started
 
