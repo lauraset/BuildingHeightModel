@@ -26,7 +26,7 @@ def main():
     data_path = r'sample'
     batch_size = 16
     # Load dataset
-    testimg, testlab, nameid = dataloaderbh_testall(data_path)
+    testimg, testlab, nameid = dataloaderbh_testall(data_path,[0,0,1])
 
     testdataloader = torch.utils.data.DataLoader(
         myImageFloder_mux(testimg, testlab),
