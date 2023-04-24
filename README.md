@@ -29,9 +29,9 @@ This image can be used to test the performance of the pretrained building height
 
 ## Preprocess ZY-3 images
 - References can be seen in https://www.cnblogs.com/enviidl/p/16541009.html      
-- One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, and radiometric correction (i.e., quick atmospheric correction (QUAC)).   
+- One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, radiometric correction (i.e., quick atmospheric correction (QUAC)), and image cropping.   
 - Software: ENVI 5.3   
-- The resolution of all images during each step is set to 2.5 m.   
+- The resolution of all images at each step is set to 2.5 m.   
 - The detailed procedures are shown below:
 #### 1. ortho-rectification
 Apply the ENVI tool called `RPC orthorectification workflow` to all ZY-3 images including multi-spectral and nadir, backward, and forward images.
@@ -53,6 +53,10 @@ atmospheric effects.
 Thus, apply the ENVI tool called `quick atmospheric correction (QUAC)` to the fused multi-spectral images from step 3.   
 ![](asset/quac.jpg)
 
+#### 5. image cropping
+All images should be cropped at the same size.
+Apply the ENVI tool called `layer stacking` to multi-spectral and multi-view images.
+![](asset/crop.jpg)
 
 ## Predict the height model
 #### 1. download the pretrained weights in the `run` directory.
