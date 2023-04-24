@@ -47,23 +47,23 @@ Software: ENVI 5.3
 The detailed procedures are shown below:
 #### 1. ortho-rectification
 Apply the ENVI tool called 'RPC orthorectification workflow' to all ZY-3 images including multi-spectral and nadir, backward, and forward images.
-![](asset/ortho.png)
+![](asset/orthorectification.jpg)
 
 #### 2. image-to-image registration
 Apply the ENVI tool called 'Image Registration workflow' to nadir image (as reference) and other images (as warp images). 
 Thus, all warp images can be registered to the reference image.
-![](asset/registration.png)
+![](asset/registration.jpg)
 
 #### 3. pan-sharpening
 Apply the ENVI tool called 'Gram-Schmidt Pan Sharpening' to original multi-spectral and nadir images.   
 Thus, the two images can be fused to generate high-resolution multi-spectral images.
-![](asset/pansharpening.png)
+![](asset/pansharpening.jpg)
 
 #### 4. radiometric correction
 Note that all original images from the data provider have been radiometrically corrected, but they still suffer from
 atmospheric effects.
 Thus, apply the ENVI tool called 'quick atmospheric correction (QUAC)' to the fused multi-spectral images from step 3.   
-![](asset/quac.png)
+![](asset/quac.jpg)
 
 
 ### Predict the height model
