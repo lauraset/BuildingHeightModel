@@ -5,20 +5,6 @@ We introduce high-resolution ZY-3 multi-view images to estimate building height 
 <h5 align="right">by Yinxia Cao, Xin Huang </h5>
 
 ---------------------
-
-## To do
-introducing data preprocessing steps   
-details can be seen in https://www.cnblogs.com/enviidl/p/16541009.html   
-The main steps includes: 
-```
-1) orthorectification on all images to 2.5 m;
-2) image-to-image registration; 
-3) gram-schimit pansharping on multi-spectral and nadir images;   
-4) image cropping;
-5) quick atmospheric correction on the fused multi-spectral images from step 2).
-```
-Codes will be updated as soon as possible.
-
 ## Getting Started
 
 #### Requirements:
@@ -42,27 +28,29 @@ Take Hong Kong, China for example:
 This image can be used to test the performance of the pretrained building height model.
 
 ### Preprocess ZY-3 images
-One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, and radiometric correction (i.e., quick atmospheric correction (QUAC)).
-Software: ENVI 5.3
-The detailed procedures are shown below:
+- References can be seen in https://www.cnblogs.com/enviidl/p/16541009.html      
+- One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, and radiometric correction (i.e., quick atmospheric correction (QUAC)).   
+- Software: ENVI 5.3   
+- The resolution of all images during each step is set to 2.5 m.   
+- The detailed procedures are shown below:
 #### 1. ortho-rectification
-Apply the ENVI tool called 'RPC orthorectification workflow' to all ZY-3 images including multi-spectral and nadir, backward, and forward images.
+Apply the ENVI tool called `RPC orthorectification workflow` to all ZY-3 images including multi-spectral and nadir, backward, and forward images.
 ![](asset/orthorectification.jpg)
 
 #### 2. image-to-image registration
-Apply the ENVI tool called 'Image Registration workflow' to nadir image (as reference) and other images (as warp images). 
+Apply the ENVI tool called `Image Registration workflow` to nadir image (as reference) and other images (as warp images). 
 Thus, all warp images can be registered to the reference image.
 ![](asset/registration.jpg)
 
 #### 3. pan-sharpening
-Apply the ENVI tool called 'Gram-Schmidt Pan Sharpening' to original multi-spectral and nadir images.   
+Apply the ENVI tool called `Gram-Schmidt Pan Sharpening` to original multi-spectral and nadir images.   
 Thus, the two images can be fused to generate high-resolution multi-spectral images.
 ![](asset/pansharpening.jpg)
 
 #### 4. radiometric correction
 Note that all original images from the data provider have been radiometrically corrected, but they still suffer from
 atmospheric effects.
-Thus, apply the ENVI tool called 'quick atmospheric correction (QUAC)' to the fused multi-spectral images from step 3.   
+Thus, apply the ENVI tool called `quick atmospheric correction (QUAC)` to the fused multi-spectral images from step 3.   
 ![](asset/quac.jpg)
 
 
