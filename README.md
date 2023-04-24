@@ -11,7 +11,7 @@ We introduce high-resolution ZY-3 multi-view images to estimate building height 
 - pytorch >= 1.8.0 (lower version can also work)
 - python >=3.6
 
-### Prepare the training set
+## Prepare the training set
 
 See the sample directory. Due to the copyright problem, the whole dataset is not available publicly now.
 However, the reference height data from Amap can be accessible for research use. Here is the download [link](https://pan.baidu.com/s/1bBTvZcPM6PeOXxxW3j_jOg) and extraction code is 4gn2 ). The provided data is original one, and preprocessing is needed before use.
@@ -27,7 +27,7 @@ Take Hong Kong, China for example:
 ![image](https://user-images.githubusercontent.com/39206462/158020784-6eb7d27e-6d93-4c42-b211-17d543675ba7.png)   
 This image can be used to test the performance of the pretrained building height model.
 
-### Preprocess ZY-3 images
+## Preprocess ZY-3 images
 - References can be seen in https://www.cnblogs.com/enviidl/p/16541009.html      
 - One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, and radiometric correction (i.e., quick atmospheric correction (QUAC)).   
 - Software: ENVI 5.3   
@@ -54,7 +54,7 @@ Thus, apply the ENVI tool called `quick atmospheric correction (QUAC)` to the fu
 ![](asset/quac.jpg)
 
 
-### Predict the height model
+## Predict the height model
 #### 1. download the pretrained weights in the `run` directory.
 #### 2. run the predict code and revise the path of data and weights.
 ```
@@ -70,7 +70,7 @@ python pred_zy3bh_tlcnetU_tlcmux.py  # the model with one encoder for the stacki
 ```
 #### 3. the predicted results can be seen in the `pred.rar` 
 
-### Train the height model
+## Train the height model
 #### 1. Prepare your dataset
 #### 2. edit data path
 ```
