@@ -40,6 +40,32 @@ Note that it is a good start to use the open ZY3 data from the ISPRS organizatio
 Take Hong Kong, China for example:   
 ![image](https://user-images.githubusercontent.com/39206462/158020784-6eb7d27e-6d93-4c42-b211-17d543675ba7.png)   
 This image can be used to test the performance of the pretrained building height model.
+
+### Preprocess ZY-3 images
+One-by-one steps: ortho-rectification, image-to-image registration, pan-sharpening, and radiometric correction (i.e., quick atmospheric correction (QUAC)).
+Software: ENVI 5.3
+The detailed procedures are shown below:
+#### 1. ortho-rectification
+Apply the ENVI tool called 'RPC orthorectification workflow' to all ZY-3 images including multi-spectral and nadir, backward, and forward images.
+![](asset/ortho.png)
+
+#### 2. image-to-image registration
+Apply the ENVI tool called 'Image Registration workflow' to nadir image (as reference) and other images (as warp images). 
+Thus, all warp images can be registered to the reference image.
+![](asset/registration.png)
+
+#### 3. pan-sharpening
+Apply the ENVI tool called 'Gram-Schmidt Pan Sharpening' to original multi-spectral and nadir images.   
+Thus, the two images can be fused to generate high-resolution multi-spectral images.
+![](asset/pansharpening.png)
+
+#### 4. radiometric correction
+Note that all original images from the data provider have been radiometrically corrected, but they still suffer from
+atmospheric effects.
+Thus, apply the ENVI tool called 'quick atmospheric correction (QUAC)' to the fused multi-spectral images from step 3.   
+![](asset/quac.png)
+
+
 ### Predict the height model
 #### 1. download the pretrained weights in the `run` directory.
 #### 2. run the predict code and revise the path of data and weights.
