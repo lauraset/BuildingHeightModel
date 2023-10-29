@@ -80,6 +80,12 @@ python pred_zy3bh_tlcnetU_tlcmux.py  # the model with one encoder for the stacki
 ```
 #### 3. the predicted results can be seen in the `pred.rar` 
 
+## Postprocessing
+Project the building height into the footprint.   
+```
+demo_deeppreed.m
+```
+
 ## Train the height model
 #### 1. Prepare your dataset
 #### 2. edit data path
@@ -93,13 +99,7 @@ see the pretrained model in directory runs/
 python evaluate.py
 ```
 
-## Postprocessing
-Project the building height into the footprint.   
-```
-demo deeppreed.m
-```
-
-If there is any issue, please feel free to contact me. The email adress is yinxcao@163.com or yinxcao@whu.edu.cn, and researchgate link is  https://www.researchgate.net/profile/Yinxia-Cao.
+If there is any issue, please feel free to contact me. The email adress is yinxcao@163.com or yinxcao@whu.edu.cn, and [researchgate link](https://www.researchgate.net/profile/Yinxia-Cao.)
 
 ## Interesting application in Bangalore, India
 update on 2022.2.26   
