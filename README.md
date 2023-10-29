@@ -65,7 +65,13 @@ Apply the ENVI tool called `layer stacking` to multi-spectral and multi-view ima
 data_path = r'sample' # the path of images 
 resume = r'runs\tlcnetu_zy3bh\V1\finetune_298.tar' # the path of pretrained weights
 ```
+- whole image   
+use `jupyterlab` to run the following code: (first `pip install jupyterlab`, then type `jupyter lab` in the command prompt.
+```
+0311_predict_tlcnetU_process_wholeimg.ipynb
+```
 
+- testset
 ```
 python pred_zy3bh_tlcnetU.py         # the proposed model with two encoders for multi-spectral and multi-view images
 python pred_zy3bh_tlcnetU_mux.py     # the model with one encoder for multi-spectral images
